@@ -1,0 +1,104 @@
+/* Created by prasetyatf. Inspired by WPS */
+
+/* font-family: 'Inter', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+:root {
+  --primary: #a7844f;
+  --bg-dark: #1a1919;
+  --bg-darker: #0f0f0f;
+
+  --font-normal: #b7b6b6;
+  --font-bold: #dadada;
+  --font-link: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
+body {
+  background-color: var(--bg-darker);
+  font-family: "Nunito", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--font-bold);
+}
+
+p {
+  color: var(--font-normal);
+}
+
+a {
+  color: var(--font-link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #cea464;
+}
+
+a:active {
+  color: rgb(253, 101, 101);
+}
+
+a:visited {
+  color: #8a6e43;
+}
+
+nav {
+  background-color: var(--bg-dark);
+  padding: 0.6em;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.nav-logo {
+  color: var(--font-bold);
+  font-weight: bold;
+  font-size: calc(1vw + 0.7rem);
+  min-width: 100px;
+}
+
+span.variasi {
+  display: inline-block;
+  color: var(--primary);
+  font-size: 100%;
+  margin: 0 3px;
+}
+
+.nav-menu a {
+  font-size: 94%;
+  font-weight: bold;
+  margin: 0 2.5vw;
+  position: relative;
+  top: 10%;
+}
+
+.nav-icon a {
+  display: inline-block;
+  position: relative;
+}
+
+section {
+  position: relative;
+  top: 3rem;
+  left: 0;
+  right: 0;
+}
