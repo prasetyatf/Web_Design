@@ -26,6 +26,8 @@ font-family: 'Raleway', sans-serif; */
 body {
   background-color: var(--bg-darker);
   font-family: "Nunito", sans-serif;
+  min-height: 1100vh; /*sementara biar bisa discroll*/
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -96,9 +98,104 @@ span.variasi {
   position: relative;
 }
 
-section {
+/* pakai flex supaya bisa ngatur landing-content
+(landing-content diperlakukan sbg item dari container flexbox) */
+/* min-height: 90vh supaya gambar selalu hampir memenuhi panjang device */
+.landing-container {
+  min-height: calc(90vh - 1rem);
+  display: flex;
+  align-items: center;
+  background-image: url("../img/landing-img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   position: relative;
-  top: 3rem;
-  left: 0;
-  right: 0;
+}
+
+/* rgba(255, 255, 255, 0) = (red, green, blue, alpha). 
+alpha 0 = sangat transparan. alpha 1 = sangat tidak transparan */
+.landing-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(
+    0deg,
+    var(--bg-darker) 3%,
+    rgba(255, 255, 255, 0) 45%
+  );
+}
+
+.landing-content {
+  position: absolute;
+  margin: 0 0 0 4vw;
+}
+
+.landing-content-h1 {
+  font-size: calc(1vmax + 1.6rem);
+  font-weight: bold;
+  line-height: 1;
+}
+
+.landing-content-p {
+  font-size: 90%;
+  font-weight: lighter;
+  margin: 1% 0;
+  width: 300px;
+}
+
+.btn-buy {
+  font-weight: bold;
+  font-size: 1rem;
+  background: var(--primary);
+  padding: 0.3em 0.8em;
+  border-radius: 0.4rem;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+.menu-container,
+.about-container,
+.contact-container {
+  text-align: center;
+  margin: 0.8rem auto;
+  padding: 5rem 1rem 1rem;
+  /* atas sengaja paling besar supaya tidak tertutup navbar saat diklik 
+  di menu navbar*/
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 1rem 0.5vw;
+}
+
+img.card-item-img {
+  position: relative;
+  border-radius: 50%;
+}
+
+.twocolumn-about-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+img.about-img {
+  display: inline-block;
+  max-width: 100vw;
+}
+
+p.about-text {
+  display: inline-block;
+  max-width: 800px;
 }
