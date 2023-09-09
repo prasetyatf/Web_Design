@@ -30,7 +30,8 @@
           <a href="#contact">Contact</a>
         </div>
         <div class="nav-icon">
-          <a href="#"><i data-feather="search"></i></a>
+          <a href="#" id="serach"><i data-feather="search"></i></a>
+          <a href="#" id="hamburger-menu"><i data-feather="menu" ></i></a>
         </div>
       </nav>
       <!-- Navbar End -->
@@ -143,8 +144,7 @@
     <section id="contact" class="contact-container">
       <h1 class="title-section">Hubungi <span class="variasi">Kami</span></h1>
       <div class="twocolumn-contact-container">
-        <div class="contact-item-map">
-
+        <div class="map-container">
           <iframe
             class="map-style"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.3836148726655!2d110.59848343682852!3d-7.533071774377413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a6eba7f2e46d3%3A0x31e5b31c35bede24!2sPerpustakaan%20Umum%20Daerah%20Boyolali%20(Remen%20Maos)!5e0!3m2!1sid!2sid!4v1693937690749!5m2!1sid!2sid"
@@ -153,7 +153,7 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div class="contact-item-form">
+          <div class="form-container">
           <form action="">
             <div class="form-style">
               <i data-feather="mail" class="icon"></i><input type="text" placeholder="text"/>
@@ -183,5 +183,8 @@
     <script>
       feather.replace();
     </script>
+
+    <!-- Navbar JS -->
+    <script src="templates/js/navbar.js"></script>
   </body>
 </html>
