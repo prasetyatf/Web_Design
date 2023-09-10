@@ -1,4 +1,4 @@
-/* Created by prasetyatf. Inspired by WPS */
+/* Created by prasetyatf. Inspired by WPU */
 
 /* font-family: 'Inter', sans-serif;
 font-family: 'Mukta', sans-serif;
@@ -57,6 +57,8 @@ a:visited {
   color: #8a6e43;
 }
 
+/* NAVBAR START */
+
 nav {
   background-color: var(--bg-dark);
   padding: 0.6em;
@@ -97,6 +99,14 @@ span.variasi {
   display: inline-block;
   position: relative;
 }
+
+/* hilangkan hamburger menu */
+#hamburger-menu {
+  display: none;
+}
+
+/* NAVBAR END */
+/* LANDING/HERO START */
 
 /* pakai flex supaya bisa ngatur landing-content
 (landing-content diperlakukan sbg item dari container flexbox) */
@@ -157,15 +167,19 @@ alpha 0 = sangat transparan. alpha 1 = sangat tidak transparan */
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
 }
 
+/* LANDING/HERO END */
+/* MENU SECTION START */
 .menu-container,
 .about-container,
 .contact-container {
   text-align: center;
   margin: 0.8rem auto;
-  padding: 5rem 1rem 1rem;
-  /* atas sengaja paling besar supaya tidak tertutup navbar saat diklik 
+  padding: 2.6rem 1rem 1rem;
+  /* padding atas sengaja paling besar supaya tidak tertutup navbar saat diklik 
   di menu navbar*/
 }
+
+/* MENU START */
 
 .card-container {
   display: flex;
@@ -185,6 +199,9 @@ img.card-item-img {
   position: relative;
   border-radius: 50%;
 }
+
+/* MENU END */
+/* ABOUT START */
 
 .twocolumn-about-container {
   display: flex;
@@ -211,86 +228,75 @@ img.about-img {
   margin: 1.9rem 0.4vw;
 }
 
+/* ABOUT END */
+/* CONTACT START */
+
 /* Contact: incomplete RWD */
 .twocolumn-contact-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  margin: 0.5rem 1rem;
   background-color: var(--bg-dark);
-  padding: 0.7rem;
-  width: 100vw;
-  align-items: center;
-}
-
-.map-container {
-  flex: 1 3 100%;
-  height: 10rem;
-  width: 40%;
-  max-width: 500px;
-}
-
-.form-container {
-  height: 30%;
-  width: 95%;
-  max-width: 500px;
+  padding: 0.5rem;
+  width: 90vw;
 }
 
 .map-style {
-  flex: 1 1 100%;
-  object-position: center;
+  height: 30rem;
+  width: 50rem;
   object-fit: cover;
-  border-style: none;
+  margin-right: 1.2rem;
+  flex: 1 1 50%;
 }
 
-.form-style {
-  background-color: var(--font-bold);
-  width: 300px;
-  height: 25px;
-  position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 1rem 0;
+.form-container {
+  height: 2rem;
+  width: 22rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--font-normal);
+  margin: 0.8rem 0;
+  flex: 1 3 50%;
 }
 
-.form-style input {
-  display: inline-block;
-  margin: 1% 1.2%;
-  width: 85%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
+.form-icon {
+  color: #0f0f0f;
 }
 
-.icon {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin-left: 1.5%;
+.form-input {
+  width: 90%;
+  margin: 0 0.1rem;
+  background-color: var(--font-normal);
+  columns: #000;
 }
 
-.submit-btn {
-  font-size: 1rem;
-  padding: 0.6rem 1rem;
+.form-submit {
+  font-size: 0.7rem;
   background-color: var(--primary);
-  color: #ffffff;
-  position: relative;
+  padding: 0.7em 1em;
 }
+
+/* CONTACT END */
+/* MENU SECTION END */
+/* FOOTER START*/
 
 .footer {
   background-color: var(--primary);
   height: 100px;
 }
 
-/* hilangkan hamburger menu */
-#hamburger-menu {
-  display: none;
+.footer-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
 }
+
+.items-credit {
+  font-size: 0.8rem;
+}
+
+/* FOOTER END */
 
 /* Media Query */
 
@@ -330,5 +336,9 @@ img.about-img {
 
   .nav-menu.active {
     right: 0;
+  }
+
+  .twocolumn-contact-container {
+    flex-wrap: wrap;
   }
 }
