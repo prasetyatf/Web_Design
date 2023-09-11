@@ -61,8 +61,8 @@ a:visited {
 
 nav {
   background-color: var(--bg-dark);
-  width: 99vw;
-  padding: 0.6em;
+  width: 100vw;
+  padding: 0.6em 1.2rem;
   display: flex;
   flex-direction: row;
   align-content: flex-start;
