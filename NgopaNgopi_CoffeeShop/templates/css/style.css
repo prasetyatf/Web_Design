@@ -61,7 +61,7 @@ a:visited {
 
 nav {
   background-color: var(--bg-dark);
-  width: 100vw;
+  width: 99vw;
   padding: 0.6em;
   display: flex;
   flex-direction: row;
@@ -175,7 +175,7 @@ alpha 0 = sangat transparan. alpha 1 = sangat tidak transparan */
 .contact-container {
   text-align: center;
   margin: 0.8rem auto;
-  padding: 2.6rem 1rem 1rem;
+  padding: 4.6rem 1rem 1rem;
   /* padding atas sengaja paling besar supaya tidak tertutup navbar saat diklik 
   di menu navbar*/
 }
