@@ -1,3 +1,5 @@
+/* SELESAIKAN DARI KOMPONEN TERATAS DULU, TAMBAHKAN JAVASCRIPT JUGA! */
+
 :root {
 }
 
@@ -22,6 +24,7 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
+/* b-1 start */
 .b-1 {
   background-image: url(/templates/img/bg-1.jpg);
   background-repeat: no-repeat;
@@ -100,6 +103,10 @@ button.download:active {
   transition: 0.01s;
 }
 
+#hamburger-menu {
+  display: none;
+}
+
 .hero {
   padding: 13rem 19vw 0;
   display: flex;
@@ -127,7 +134,9 @@ button.download:active {
   position: relative;
   width: 50%;
 }
+/* b-1 end */
 
+/* b-2 start */
 .b-2 {
   background-image: url(/templates/img/bg-2.jpg);
   background-repeat: no-repeat;
@@ -136,10 +145,91 @@ button.download:active {
   width: 100vw;
 }
 
+.section-1 {
+  display: flex;
+  flex-direction: row;
+  padding: 0 19vw;
+}
+/* ketika diresize menu atas akan menutupi class ini, pake media query bwt menghidden? */
+.stats-thumbnail {
+  display: flex;
+  flex-direction: row;
+  padding: 16vh 0 0;
+  width: 50%;
+}
+
+.stats-desc {
+  flex-wrap: wrap;
+  padding: 20vh 0;
+  width: 50%;
+}
+/* b-2 end */
+
 .b-3 {
   background-image: url(/templates/img/bg-3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 31.6rem;
   width: 100vw;
+}
+
+/* 428px */
+@media (max-width: 428px) {
+  .nav-menu {
+    background-color: rgb(254, 155, 240);
+    width: 45vw;
+    height: 100vh;
+    position: absolute;
+    top: 75%;
+    right: 0;
+    bottom: 0;
+    left: -55%; /* geser ke luar layar*/
+  }
+
+  .nav-menu.active {
+    /* untuk toggle JS */
+    right: 0;
+    left: 55%; /* geser ke dalam layar*/
+  }
+
+  .nav-menu a {
+    display: block;
+    position: relative;
+    margin: 2.5vh 1.7vw 0;
+  }
+
+  .nav-menu .download {
+    background-color: #fd9bbd;
+    display: block;
+    padding: 0.8vw 0;
+    position: relative;
+    color: white;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    font-weight: bolder;
+    margin: 1vh 0;
+  }
+
+  button.download:hover {
+    transform: none;
+    transition: none;
+  }
+
+  button.download:active {
+    transform: scale(0.9);
+    transition: 0.08s;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+    color: #fff;
+    padding: 1vh 0;
+  }
+
+  .rotate:active {
+    transform: rotate(180deg);
+    transform-origin: center;
+    transition: 0.7s;
+  }
 }
