@@ -183,13 +183,14 @@ button.download:active {
     top: 75%;
     right: 0;
     bottom: 0;
-    left: -55%; /* geser ke luar layar*/
+    left: 100%;/* geser ke luar layar*/
   }
 
   .nav-menu.active {
     /* untuk toggle JS */
     right: 0;
     left: 55%; /* geser ke dalam layar*/
+    transition: 0.2s;
   }
 
   .nav-menu a {
@@ -227,9 +228,8 @@ button.download:active {
     padding: 1vh 0;
   }
 
-  .rotate:active {
-    transform: rotate(180deg);
-    transform-origin: center;
-    transition: 0.7s;
+  .animation:active {
+    transform: scale(1.6);
+    transition: 0.2s;
   }
 }
