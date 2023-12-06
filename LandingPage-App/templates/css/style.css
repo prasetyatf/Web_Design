@@ -28,6 +28,10 @@ p {
   text-align: justify;
 }
 
+.button-container{
+  padding: 3vh 0;
+}
+
 /* b-1 start */
 .b-1 {
   background-image: url(/templates/img/bg-1.jpg);
