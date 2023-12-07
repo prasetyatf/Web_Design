@@ -17,9 +17,11 @@ font-family: 'Rubik', sans-serif; */
 
 * {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   text-decoration: none;
+  outline: none;
 }
 
 body {
@@ -94,6 +96,15 @@ a {
   margin: 0 1.5vw;
 }
 
+.nav-right button.button-box {
+  background-color: transparent;
+  padding: 0.3rem 0.01rem;
+  border-radius: 0.4rem;
+  border: 0.9px solid;
+  color: var(--black);
+  font-weight: bolder;
+}
+
 #hamburger-menu {
   display: none;
 }
@@ -125,6 +136,29 @@ a {
 
 .hero-img img {
   width: calc(65% + 5rem);
+}
+
+.hero-txt button.button-box {
+  background-color: transparent;
+  margin: 6vh 0 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  border: 0.9px solid;
+  color: var(--black);
+  font-weight: bolder;
+}
+
+.partner-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.partner-links .partner-logo {
+  display: inline-block;
+  margin: 10vh 0 0;
+  height: 50%;
+  width: 20%;
 }
 /* Hero end */
 
