@@ -1,0 +1,138 @@
+/* font-family: 'Epilogue', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Rubik', sans-serif; */
+
+/* - Almost White: hsl(0, 0%, 98%)
+- Medium Gray: hsl(0, 0%, 41%)
+- Almost Black: hsl(0, 0%, 8%) */
+
+:root {
+  --white: hsl(0, 0%, 98%);
+  --Gray: hsl(0, 0%, 41%);
+  --black: hsl(0, 0%, 8%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--white);
+  border: 0;
+  font-family: "Epilogue", sans-serif;
+  height: 100vh;
+  outline: none;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--black);
+}
+
+p {
+  text-align: justify;
+  color: var(--Gray);
+}
+
+a {
+  color: var(--black);
+}
+
+/* Navbar start */
+#navbar {
+  display: flex;
+  flex-direction: row;
+  padding: 2.5rem 2rem;
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.nav-logo {
+  display: inline-block;
+  margin-right: 3vw;
+}
+
+.nav-logo img.tes {
+  display: inline-block;
+  width: 4rem;
+}
+
+.nav-left a {
+  display: inline-block;
+  margin: 0 1.3vw;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.nav-right a {
+  display: inline-block;
+  margin: 0 1.5vw;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Navbar end */
+
+/* Hero start */
+.hero {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1vh 0 0;
+  padding: 0 8rem;
+  width: 100vw;
+}
+
+.hero-txt {
+  display: inline-block;
+  margin-right: 9vw;
+  width: calc(25vw + 5rem);
+}
+
+.hero-img {
+  display: inline-block;
+  margin-left: 9vw;
+  width: calc(25vw + 5rem);
+}
+
+.hero-img img {
+  width: calc(65% + 5rem);
+}
+/* Hero end */
+
+/* mobile: 375px */
+@media (max-width: 375px) {
+  #hamburger-menu {
+    display: inline-block;
+    height: 1rem;
+    width: 1.5rem;
+  }
+}
