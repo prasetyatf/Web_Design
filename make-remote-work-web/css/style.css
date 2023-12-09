@@ -84,15 +84,7 @@ a {
   margin: 0 1.3vw;
 }
 
-.nav-left a:nth-child(2)::after {
-  content: " ";
-  background-image: url(/images/icon-arrow-down.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 1rem;
-}
-
-.nav-left a:nth-child(3)::after {
+.dropdown-img::after {
   content: " ";
   background-image: url(/images/icon-arrow-down.svg);
   background-repeat: no-repeat;
@@ -113,7 +105,7 @@ a {
   margin: 0 1.5vw;
 }
 
-.nav-right a:nth-child(2) {
+.special-button {
   background-color: transparent;
   padding: 0.5rem;
   border-radius: 0.4rem;
@@ -125,6 +117,13 @@ a {
   display: none;
 }
 
+.dropdown-active{
+  display: block;
+  position: absolute;
+  background-color: #f8f8f8;
+  height: 2vh;
+  width: 1vw;
+  }
 /* Navbar end */
 
 /* Hero start */
@@ -161,17 +160,6 @@ a {
 
 .hero-p {
   padding: 6vh 0;
-}
-
-.hero-txt a {
-  display: inline-block;
-  background-color: transparent;
-  margin: 0 0 5vh;
-  padding: 0.5rem 1rem;
-  border-radius: 0.4rem;
-  border: 0.9px solid;
-  color: var(--black);
-  font-weight: bolder;
 }
 
 .partner-links {
@@ -238,11 +226,12 @@ a {
 
   .hero-p {
     font-size: 4vw;
+    margin: 0 0 5vh;
     padding: calc(1vw + 0.5rem);
     text-align: center;
   }
 
-  .hero-txt a {
+  .special-button {
     background-color: var(--black);
     margin: 2vh 0;
     padding: 0.5rem 1rem;
