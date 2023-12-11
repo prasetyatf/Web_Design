@@ -57,8 +57,8 @@ a {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 999;
   width: 100vw;
+  z-index: 999;
 }
 
 .nav-left {
@@ -74,14 +74,62 @@ a {
   margin-right: 3vw;
 }
 
-.nav-logo img.tes {
+.nav-logo img.logo {
   display: inline-block;
   width: 4rem;
 }
 
-.nav-left a {
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+
+/* nth-of-type memilih anak berdasarkan elemen yg sama */
+.nav-menu > .dropdown-img:nth-of-type(1) + .nav-menu-list {
+  border-radius: 0.3rem;
+  box-shadow: 1px 1px 11px rgba(0, 0, 0, 0.8);
+  display: none;
+  background-color: #ffff;
+  padding: 1rem;
+  margin: 1vw;
+  position: absolute;
+  top: 9vh;
+  left: 9vw;
+  width: 9.5rem;
+  list-style: none;
+}
+
+/* nth-of-type memilih anak berdasarkan elemen yg sama */
+.nav-menu > .dropdown-img:nth-of-type(2) + .nav-menu-list {
+  border-radius: 0.3rem;
+  box-shadow: 1px 1px 11px rgba(0, 0, 0, 0.8);
+  display: none;
+  background-color: #ffff;
+  padding: 1rem;
+  margin: 1vw;
+  position: absolute;
+  top: 9vh;
+  left: 23vw;
+  height: 8rem;
+  width: 7.8rem;
+  list-style: none;
+}
+
+.nav-menu li {
+  margin: 0 1vw;
+}
+
+.nav-menu .nav-menu-list li {
   display: inline-block;
-  margin: 0 1.3vw;
+  margin: 0.5rem 3px;
 }
 
 .dropdown-img::after {
@@ -92,19 +140,34 @@ a {
   padding: 1rem;
 }
 
+img.icon {
+  display: inline-block;
+  margin: 0 5px;
+}
+
 .nav-right {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  display: inline-block;
+  margin-left: calc(50vw - 12rem);
   height: 100%;
   width: 50%;
 }
 
 .nav-right a {
   display: inline-block;
-  margin: 0 1.5vw;
+  margin: 0 ;
 }
 
+/* Register Button */
+.nav-right .nav-menu li:nth-child(2){
+  background-color: transparent;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  border: 0.9px solid;
+  color: var(--black);
+  text-align: center;
+}
+
+/* Learn More Button */
 .special-button {
   background-color: transparent;
   padding: 0.5rem;
@@ -117,13 +180,14 @@ a {
   display: none;
 }
 
-.dropdown-active{
+/* DROPDOWN MENU BELUM BERES */
+.dropdown-menu {
   display: block;
-  position: absolute;
-  background-color: #f8f8f8;
-  height: 2vh;
-  width: 1vw;
-  }
+  background-color: blueviolet;
+  padding: 1vh 0;
+  width: 7rem;
+}
+
 /* Navbar end */
 
 /* Hero start */
@@ -187,15 +251,41 @@ a {
 
 /* mobile: 375px */
 @media (max-width: 800px) {
+/* Navbar start */
   #navbar {
     padding: 2vh 4vw 0;
   }
+
+  /* ini adl kelas baru supaya mudah menyatukan nav-left nav-right */
+  .nav{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffff;
+    height: 100vh;
+    width: 45vw;
+  }
+
+  .nav .nav-left .nav-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+  }
+
+  /* tengahkan menu login & register */
+  .nav .nav-right .nav-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+   }
 
   #hamburger-menu {
     display: inline-block;
     height: 1rem;
     width: 1.5rem;
   }
+/* Navbar end */
 
   .hero {
     margin: 0;
