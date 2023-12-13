@@ -49,81 +49,89 @@ a {
 }
 
 /* Navbar start */
-#navbar {
+header {
   display: flex;
   flex-direction: row;
-  padding: 5vh 4vw 5vh;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 5vh 3vw 0;
   position: relative;
   top: 0;
-  right: 0;
   left: 0;
+  right: 0;
   z-index: 999;
-  width: 100vw;
 }
 
-.nav-left {
-  display: flex;
-  flex-direction: row;
-  /* flex-wrap: wrap; */
-  justify-content: flex-start;
-  width: 50%;
+.logo {
+  float: left;
+  margin-right: 2vw;
 }
 
-.nav-logo {
-  display: inline-block;
-  margin-right: 3vw;
+header nav.left {
+  width: 100%;
 }
 
-.nav-logo img.tes {
-  display: inline-block;
-  width: 4rem;
+header nav.left ul {
+  list-style: none;
 }
 
-.nav-left a {
-  display: inline-block;
-  margin: 0 1.3vw;
+header nav.left ul li {
+  float: left;
+  margin: 0 1vw;
 }
 
-.dropdown-img::after {
-  content: " ";
-  background-image: url(/images/icon-arrow-down.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 1rem;
-}
-
-.nav-right {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  height: 100%;
-  width: 50%;
-}
-
-.nav-right a {
-  display: inline-block;
-  margin: 0 1.5vw;
-}
-
-.special-button {
-  background-color: transparent;
-  padding: 0.5rem;
-  border-radius: 0.4rem;
-  border: 0.9px solid;
-  color: var(--black);
-}
-
-#hamburger-menu {
-  display: none;
-}
-
-.dropdown-active{
-  display: block;
+header nav.left ul li ul.features {
   position: absolute;
-  background-color: #f8f8f8;
-  height: 2vh;
-  width: 1vw;
-  }
+  left: 10%;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.5);
+  padding: 1vh 0;
+  width: 8%;
+}
+
+header nav.left ul li ul.features li {
+  width: 100%;
+  margin: 1vh 0;
+}
+
+header nav.left ul li ul.company {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.5);
+  padding: 1vh 0;
+  width: 8%;
+}
+
+header nav.left ul li ul.company li {
+  width: 100%;
+  margin: 1vh 0;
+}
+
+header nav.right {
+width: 20%;
+}
+
+header nav.right ul {
+  list-style: none;
+}
+
+header nav.right ul li {
+  float: left;
+  margin: 0 1vw;
+}
+
+header nav.right ul li:nth-child(1) {
+  padding: .5rem 0 0;
+}
+
+header nav.right ul li:nth-child(2) {
+  padding: .5rem 1rem;
+  border: 1px solid #000;
+  border-radius: .5rem;
+}
+
 /* Navbar end */
 
 /* Hero start */
@@ -186,6 +194,7 @@ a {
 }
 
 /* mobile: 375px */
+/* BELUM BERES */
 @media (max-width: 800px) {
   #navbar {
     padding: 2vh 4vw 0;
