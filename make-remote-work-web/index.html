@@ -28,19 +28,49 @@
   <body>
     <!-- Navbar start -->
     <header>
+      <img src="/images/logo.svg" alt="logo-svg" class="logo" />
       <nav class="left">
-        <img src="/images/logo.svg" alt="logo-svg" class="logo" />
         <ul>
-          <li>
+          <li class="close"><img src="/images/icon-close-menu.svg" alt="icon-close-svg"></li>
+          <li class="dropdown">
             <a href="#">Features</a>
             <ul class="features">
-              <li><a href="#">Todo List</a></li>
-              <li><a href="#">Calendar</a></li>
-              <li><a href="#">Reminders</a></li>
-              <li><a href="#">Planning</a></li>
+              <li>
+                <a href="#"
+                  ><img src="/images/icon-todo.svg" alt="icon-todo-svg" /> Todo
+                  List</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="/images/icon-calendar.svg"
+                    alt="icon-calendar-svg"
+                  />
+                  Calendar</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="/images/icon-reminders.svg"
+                    alt="icon-reminders-svg"
+                  />
+                  Reminders</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="/images/icon-planning.svg"
+                    alt="icon-planning-svg"
+                  />
+                  Planning</a
+                >
+              </li>
             </ul>
           </li>
-          <li>
+          <li class="dropdown">
             <a href="#">Company</a>
             <ul class="company">
               <li><a href="#">History</a></li>
@@ -57,6 +87,7 @@
           <li><a href="#">Login</a></li>
           <li><a href="#">Register</a></li>
         </ul>
+        <img src="/images/icon-menu.svg" alt="icon-menu-svg" id="hamburger-menu">
       </nav>
     </header>
     <!-- Navbar end -->
