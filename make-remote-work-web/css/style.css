@@ -27,7 +27,7 @@ font-family: 'Rubik', sans-serif; */
 body {
   background-color: var(--white);
   border: 0;
-  font-family: "Epilogue", sans-serif;
+  font-family: "Epilogue", "Inter", sans-serif;
   height: 100vh;
   outline: none;
   overflow-x: hidden;
@@ -52,7 +52,6 @@ a {
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   width: 100vw;
   padding: 5vh 3vw 0;
   position: relative;
@@ -65,20 +64,24 @@ header {
 header img.logo {
   height: calc(3% + 1.5rem);
   margin-right: 2vw;
-  width: auto;
+  width: calc(2vw + 4rem);
 }
 
-header nav.left {
-  width: 70%;
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
-header nav.left ul {
+header nav ul.left {
+  flex: 3 0 70%;
   list-style: none;
+  margin: 0 calc(40vw - 14rem) 0 0;
 }
 
-header nav.left ul li {
+header nav ul li {
   float: left;
-  margin: 0 2vw;
+  margin: 0 1vw;
 }
 
 .close {
@@ -86,7 +89,7 @@ header nav.left ul li {
 }
 
 /* dropdown icon */
-header nav.left ul li.dropdown::after {
+header nav ul.left li.dropdown::after {
   content: "";
   background-image: url(/images/icon-arrow-down.svg);
   background-repeat: no-repeat;
@@ -98,55 +101,55 @@ header nav.left ul li.dropdown::after {
   width: 100%;
 }
 
-header nav.left ul li ul.features {
+header nav ul.left li ul.features {
   display: none;
   position: absolute;
   left: 10%;
   background-color: #fff;
   border-radius: 0.3rem;
   box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.5);
-  padding: 1.5vh 1.5rem;
-  width: 9.5rem;
+  padding: 1.5vh 0;
+  width: 10rem;
+  list-style: none;
 }
 
-header nav.left ul li ul.features li {
+header nav ul.left li ul.features li {
   width: 100%;
-  margin: 1.5vh 0;
+  margin: 1.5vh 1.5rem;
 }
 
-header nav.left ul li ul.company {
+header nav ul.left li ul.company {
   display: none;
   position: absolute;
   background-color: #fff;
   border-radius: 0.3rem;
   box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.5);
-  padding: 1.5vh 1.5rem;
-  width: 8rem;
-}
-
-header nav.left ul li ul.company li {
-  width: 100%;
-  margin: 1.5vh 0;
-}
-
-header nav.right {
-  width: 25%;
-}
-
-header nav.right ul {
+  padding: 1.5vh 0;
+  width: 7rem;
   list-style: none;
 }
 
-header nav.right ul li {
-  float: left;
-  margin: 0 1vw;
+header nav ul.left li ul.company li {
+  width: 100%;
+  margin: 1.5vh 1.5rem;
 }
 
-header nav.right ul li:nth-child(1) {
+header nav ul.right {
+  flex: 1 0 30%;
+  list-style: none;
+  width: 100%;
+}
+
+header nav ul.right li {
+  float: left;
+  margin: 0 1vw 2vw 0;
+}
+
+header nav ul.right li:nth-child(1) {
   padding: 0.5rem 0 0;
 }
 
-header nav.right ul li:nth-child(2) {
+header nav ul.right li:nth-child(2) {
   padding: 0.5rem 1rem;
   border: 1px solid #000;
   border-radius: 0.5rem;
@@ -231,43 +234,63 @@ header nav.right ul li:nth-child(2) {
 
 @media (max-width: 790px) {
   /* Navbar start */
-  #hamburger-menu {
-    display: block;
+  /* ul.left & ul.right sudah berada di bawah nav */
+
+  header {
+    padding: 3vh;
   }
 
-  header nav.left {
-    background-color: white;
+  header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #fff;
+    height: 100vh;
+    width: 60vw;
+    margin: 0;
     position: absolute;
     top: 0;
     right: 0;
-    left: 50%;
-    height: 100vh;
-    width: 55vw;
+    left: 40%;
+    z-index: 999;
   }
 
-  header nav.left ul {
+  header nav ul.left {
+    flex: 0;
     list-style: none;
-    display: flex;
-    flex-direction: column;
+    margin: 0;
+  }
+
+  header nav ul li {
+    display: block;
+    float: none;
+    margin: 2vh;
   }
 
   .close {
     display: block;
+    padding: 0.5rem;
     position: relative;
-    padding: 0;
-    width: 80%;
+    right: 0;
+    left: 65%;
+    width: vw;
   }
 
   .close img {
-    float: right;
+    width: 7vw;
   }
 
-  header nav.left ul li {
-    padding: 1.5vh 2vw;
+  #hamburger-menu {
+    display: block;
+    height: 1rem;
+    width: 1.5rem;
+    position: relative;
+    right: 0;
+    left: 70%;
   }
 
-  /* dropdown icon */
-  header nav.left ul li.dropdown::after {
+  /* dropdown icon MALAH GESER KE BAWAH SUBMENU*/
+  header nav ul.left li.dropdown::after {
     content: "";
     background-image: url(/images/icon-arrow-down.svg);
     background-repeat: no-repeat;
@@ -279,61 +302,57 @@ header nav.right ul li:nth-child(2) {
     width: 100%;
   }
 
-  header nav.left ul li ul.features {
-    display: none;
-    position: absolute;
-    left: 10%;
+  header nav ul.left li ul.features {
+    display: block;
+    position: relative;
+    left: 0;
     background-color: #fff;
     border-radius: 0.3rem;
-    box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.5);
-    padding: 1.5vh 1.5rem;
-    width: 9.5rem;
-  }
-
-  header nav.left ul li ul.features li {
-    width: 100%;
-    margin: 1.5vh 0;
-  }
-
-  header nav.left ul li ul.company {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    border-radius: 0.3rem;
-    box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.5);
-    padding: 1.5vh 1.5rem;
-    width: 8rem;
-  }
-
-  header nav.left ul li ul.company li {
-    width: 100%;
-    margin: 1.5vh 0;
-  }
-
-  header nav.right {
-    width: 20%;
-  }
-
-  header nav.right ul {
+    box-shadow: none;
+    padding: 1.5vh 0;
+    width: 10rem;
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 16rem;
-    right: 10%;
   }
 
-  header nav.right ul li {
-    margin: 1vh 0;
+  header nav ul.left li ul.features li {
+    width: 100%;
+    margin: 1.5vh 1.5rem;
   }
 
-  header nav.right ul li:nth-child(1) {
-    padding: 0;
+  header nav ul.left li ul.company {
+    display: block;
+    position: relative;
+    background-color: #fff;
+    border-radius: 0.3rem;
+    box-shadow: none;
+    padding: 1.5vh 0;
+    width: 7rem;
+    list-style: none;
   }
 
-  header nav.right ul li:nth-child(2) {
-    padding: 0.5rem 2rem;
+  header nav ul.left li ul.company li {
+    width: 100%;
+    margin: 1.5vh 1.5rem;
+  }
+
+  header nav ul.right {
+    flex: 0;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav ul.right li {
+    float: none;
+    margin: 2vw;
+  }
+
+  header nav ul.right li:nth-child(1) {
+    padding: 0.5rem 0 0;
+  }
+
+  header nav ul.right li:nth-child(2) {
+    padding: 0.5rem 1rem;
     border: 1px solid #000;
     border-radius: 0.5rem;
   }
