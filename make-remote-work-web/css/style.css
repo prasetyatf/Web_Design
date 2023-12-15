@@ -113,6 +113,11 @@ header nav ul.left li ul.features {
   list-style: none;
 }
 
+/* class utk mainin toggle */
+header nav ul.left li ul.features.active{
+  display: block;
+}
+
 header nav ul.left li ul.features li {
   width: 100%;
   margin: 1.5vh 1.5rem;
@@ -127,6 +132,11 @@ header nav ul.left li ul.company {
   padding: 1.5vh 0;
   width: 7rem;
   list-style: none;
+}
+
+/* class untuk mainin toggle */
+header nav ul.left li ul.company.active{
+  display: block;
 }
 
 header nav ul.left li ul.company li {
@@ -251,7 +261,7 @@ header nav ul.right li:nth-child(2) {
     position: absolute;
     top: 0;
     right: 0;
-    left: 40%;
+    left: 110%; /* 40%*/
     z-index: 999;
   }
 
@@ -302,7 +312,7 @@ header nav ul.right li:nth-child(2) {
     width: 100%;
   }
 
-  header nav ul.left li ul.features {
+  header nav ul.left li ul.features.active {
     display: block;
     position: relative;
     left: 0;
@@ -319,7 +329,7 @@ header nav ul.right li:nth-child(2) {
     margin: 1.5vh 1.5rem;
   }
 
-  header nav ul.left li ul.company {
+  header nav ul.left li ul.company.active {
     display: block;
     position: relative;
     background-color: #fff;
