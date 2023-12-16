@@ -40,6 +40,7 @@ h3 {
 }
 
 p {
+  font-size: 18px;
   text-align: justify;
   color: var(--Gray);
 }
@@ -235,9 +236,9 @@ header nav ul.right li:nth-child(2) {
 }
 /* Hero end */
 
-.shadow{
+.shadow {
   background-color: transparent;
-  opacity: .3;
+  opacity: 0.3;
   min-height: 100vh;
   min-width: 100vw;
 
