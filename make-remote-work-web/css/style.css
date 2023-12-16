@@ -311,19 +311,6 @@ header nav ul.right li:nth-child(2) {
     left: 70%;
   }
 
-  /* dropdown icon MALAH GESER KE BAWAH SUBMENU*/
-  /* header nav ul.left li.dropdown::after {
-    content: "";
-    background-image: url(/images/icon-arrow-down.svg);
-    background-repeat: no-repeat;
-    padding: 1rem 0.5rem;
-    position: relative;
-    top: 1.2rem;
-    right: 0;
-    left: 0.5rem;
-    width: 100%;
-  } */
-
   /* sudah ada ul.features dg displat: none; di atas jadi g perlu dideclare di sini lg */
   header nav ul.left li ul.features.active {
     display: block;
