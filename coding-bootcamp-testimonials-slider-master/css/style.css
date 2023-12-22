@@ -1,0 +1,211 @@
+/* Mobile View First */
+/* PHONES ONLY */
+
+/* POSISI BUTTON BELUM BERES */
+
+:root {
+  --darkBlue: hsl(240, 38%, 20%);
+  --grayishBlue: hsl(240, 18%, 77%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+body {
+  color: var(--darkBlue);
+  font-family: "Inter", sans-serif;
+  font-size: calc(1vw + 1.2rem);
+}
+
+main.container {
+  display: flex;
+  flex-flow: row wrap-reverse;
+  flex: 1 100%;
+}
+
+section.left-item {
+  order: 1;
+  height: 60vh;
+  width: 100vw;
+}
+
+.top {
+  background-image: url(/images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 10%;
+  background-size: 15%;
+  height: 45%;
+}
+
+p {
+  text-align: center;
+  padding: 6.5vh 1vw 0;
+}
+
+.author {
+  display: block;
+  font-size: medium;
+  width: 30%;
+  text-align: center;
+  margin: 2vh auto;
+}
+
+.bottom {
+  background-image: url(/images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  height: 55%;
+  background-size: 100vw;
+}
+
+section.right-item {
+  order: 1;
+  height: 40vh;
+  width: 100vw;
+  background-image: url(/images/pattern-bg.svg);
+  background-repeat: no-repeat;
+  background-position-x: 30%;
+  background-position-y: 15%;
+  background-size: 85%;
+}
+
+.slider-container {
+  height: auto;
+  width: calc(60vw + 0.5rem);
+  margin: 4vh auto;
+  box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.slider-container img {
+  height: 100%;
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+  background-color: #fff;
+  padding: 0.2rem 1rem;
+  margin: 0 auto;
+  border-radius: 5rem;
+  position: absolute;
+  top: 31%;
+  left: 40%;
+}
+
+.button a:hover img{
+  border-color: rgb(225, 225, 225);
+  transform: scale(1.4);
+  transition: 100ms;
+}
+
+.button a img:active{
+  transform: scale(0.8);
+  transition: 100ms;
+}
+
+.button a img:nth-child(1) {
+  height: 40%;
+  width: 70%;
+}
+
+.button a img:nth-child(2) {
+  height: 40%;
+  width: 70%;
+}
+
+/* UTK TAMPILAN KINDLE, IPAD */
+@media (min-width: 700px){
+  section.right-item{
+    background-size: calc(65% - 5rem);
+    background-position: center;
+  }
+
+  .slider-container {
+    width: calc(49vw - 3.8rem);
+    margin: 10% auto;
+  }
+
+  .button {
+    align-items: center;
+    background-color: #fff;
+    padding: .2rem .6rem;
+    position: absolute;
+    top: 35%;
+    left: 45%;
+  }
+
+  .bottom{
+    background-size: 100vw;
+  }
+}
+
+/* UTK TAMPILAN DESKTOP */
+@media (min-width: 811px) {
+  section.left-item {
+    order: 1;
+    flex: 1;
+    height: 100vh;
+  }
+
+.top{
+  background-position-y: 55%;
+  background-position-x: 30%;
+}
+
+  p {
+    position: absolute;
+    top: 20%;
+    left: 7%;
+    text-align: left;
+    width: 60%;
+  }
+
+  .author{
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: .8em;
+  }
+
+  section.right-item {
+    background-size: 90%;
+    order: 1;
+    flex: 1;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .slider-container {
+    width: calc(35vw - .5rem);
+    margin: 15vh auto;
+  }
+
+  .slider-container img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .button {
+    align-items: center;
+    background-color: #fff;
+    padding: .2rem .6rem;
+    position: absolute;
+    top: 75%;
+    left: 62%;
+  }
+
+  .bottom{
+    background-size: 100%;
+  }
+}
+
