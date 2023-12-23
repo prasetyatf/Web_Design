@@ -1,7 +1,7 @@
 /* Mobile View First */
 /* PHONES ONLY */
 
-/* POSISI BUTTON BELUM BERES */
+/* TAMPILAN DESKTOP BELUM BERES */
 
 :root {
   --darkBlue: hsl(240, 38%, 20%);
@@ -20,6 +20,7 @@ body {
   color: var(--darkBlue);
   font-family: "Inter", sans-serif;
   font-size: calc(1vw + 1.2rem);
+  scroll-behavior: smooth;
 }
 
 main.container {
@@ -43,9 +44,28 @@ section.left-item {
   height: 45%;
 }
 
-p {
+.slider {
+  display: flex;
+  width: 100vw;
+}
+
+p.txt-1 {
+  display: none;
   text-align: center;
-  padding: 6.5vh 1vw 0;
+  padding: 6.5vh 1.5vw 0;
+  width: 100vw;
+}
+
+p.txt-2 {
+  display: none;
+  text-align: center;
+  padding: 6.5vh 1.5vw 0;
+  width: 100vw;
+}
+
+.txt-1.active,
+.txt-2.active {
+  display: block;
 }
 
 .author {
@@ -76,15 +96,21 @@ section.right-item {
 }
 
 .slider-container {
+  display: flex;
   height: auto;
-  width: calc(60vw + 0.5rem);
+  width: calc(70vw - 3.7rem);
   margin: 4vh auto;
   box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  top: 7%;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 .slider-container img {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: calc(250px - 0.9rem);
 }
 
 .button {
@@ -102,13 +128,13 @@ section.right-item {
   left: 40%;
 }
 
-.button a:hover img{
+.button a:hover img {
   border-color: rgb(225, 225, 225);
   transform: scale(1.4);
   transition: 100ms;
 }
 
-.button a img:active{
+.button a img:active {
   transform: scale(0.8);
   transition: 100ms;
 }
@@ -123,29 +149,49 @@ section.right-item {
   width: 70%;
 }
 
-/* UTK TAMPILAN KINDLE, IPAD */
-@media (min-width: 700px){
-  section.right-item{
+/* UTK TAMPILAN KINDLE */
+@media (min-width: 799px) {
+  section.right-item {
     background-size: calc(65% - 5rem);
     background-position: center;
   }
 
   .slider-container {
-    width: calc(49vw - 3.8rem);
-    margin: 10% auto;
+    width: 37vw;
+    position: relative;
+    top: 10%;
   }
+
+  .slider-container img {
+    height: auto;
+    width: 40vw;
+   }
 
   .button {
     align-items: center;
     background-color: #fff;
-    padding: .2rem .6rem;
+    padding: 0.2rem 0.6rem;
     position: absolute;
-    top: 35%;
+    top: 31%;
     left: 45%;
   }
 
-  .bottom{
+  .bottom {
     background-size: 100vw;
+  }
+}
+
+/* UTK TAMPILAN IPAD */
+@media (min-width: 809px) {
+  .slider-container {
+    position: relative;
+    top: 3%;
+  }
+
+  .button {
+    position: absolute;
+    top: 33%;
+    left: 45%;
   }
 }
 
@@ -157,10 +203,10 @@ section.right-item {
     height: 100vh;
   }
 
-.top{
-  background-position-y: 55%;
-  background-position-x: 30%;
-}
+  .top {
+    background-position-y: 55%;
+    background-position-x: 30%;
+  }
 
   p {
     position: absolute;
@@ -170,11 +216,11 @@ section.right-item {
     width: 60%;
   }
 
-  .author{
+  .author {
     display: block;
     width: 100%;
     text-align: left;
-    font-size: .8em;
+    font-size: 0.8em;
   }
 
   section.right-item {
@@ -185,27 +231,50 @@ section.right-item {
     width: 100%;
   }
 
+.slider{
+  position: absolute;
+  top: 19vh;
+  z-index: 999;
+}
+
+p.txt-1 {
+  display: none;
+  text-align: left;
+  padding: 6.5vh 1.5vw 0;
+  width: 55vw;
+}
+
+p.txt-2 {
+  display: none;
+  text-align: left;
+  padding: 6.5vh 1.5vw 0;
+  width: 55vw;
+}
+
   .slider-container {
-    width: calc(35vw - .5rem);
+    width: 30vw;
     margin: 15vh auto;
   }
 
-  .slider-container img {
-    height: 100%;
-    width: 100%;
+  .slider-container img:nth-child(1) {
+    height: auto;
+    width: 100vw;
+  }
+  .slider-container img:nth-child(2) {
+    height: auto;
+    width: 100vw;
   }
 
   .button {
     align-items: center;
     background-color: #fff;
-    padding: .2rem .6rem;
+    padding: 0.2rem 0.6rem;
     position: absolute;
-    top: 75%;
+    top: 68%;
     left: 62%;
   }
 
-  .bottom{
+  .bottom {
     background-size: 100%;
   }
 }
-

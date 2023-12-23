@@ -29,24 +29,40 @@
     <main class="container">
       <section class="left-item">
         <article class="top">
-          <p>
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-            distinctio, non vitae, eaque aliquid facere odio quae nulla eum
-            quasi voluptatibus odit omnis perferendis."
-            <span class="author"><b>Tanya Sinclair</b> UX Engineer</span>
-          </p>
+          <div class="slider">
+            <p class="txt-1 active">
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Similique distinctio, non vitae, eaque aliquid facere odio quae
+              nulla eum quasi voluptatibus odit omnis perferendis."
+              <span class="author"><b>Tanya Sinclair</b> UX Engineer</span>
+            </p>
+            <p class="txt-2">
+              "adf asdf asdf asdf asf asdf asf fas fdasdf as dfa sadf. Similique
+              distinctio, non vitae, eaque aliquid facere odio quae nulla eum
+              quasi voluptatibus odit omnis perferendis."
+              <span class="author"
+                ><b>John Takpor</b> Junior Front-end Developer</span
+              >
+            </p>
+          </div>
         </article>
         <article class="bottom"></article>
       </section>
       <section class="right-item">
         <div class="slider-container">
-          <img src="/images/image-tanya.jpg" alt="tanya-jpg">
+          <img src="/images/image-tanya.jpg" alt="tanya-jpg" id="img-1" />
+          <img src="/images/image-john.jpg" alt="john-jpg" id="img-2" />
         </div>
         <div class="button">
-          <a href="#"><img src="/images/icon-prev.svg" alt="prev-svg"></a>
-          <a href="#"><img src="/images/icon-next.svg" alt="next-svg"></a>
+          <a href="#img-1"
+            ><img src="/images/icon-prev.svg" alt="prev-svg"
+          /></a>
+          <a href="#img-2"
+            ><img src="/images/icon-next.svg" alt="next-svg"
+          /></a>
         </div>
       </section>
     </main>
+    <script src="/js/script.js"></script>
   </body>
 </html>
