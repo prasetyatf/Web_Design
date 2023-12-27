@@ -1,0 +1,108 @@
+/* ### Primary
+
+- Light Cyan: hsl(193, 38%, 86%)
+- Neon Green: hsl(150, 100%, 66%)
+
+### Neutral
+
+- Grayish Blue: hsl(217, 19%, 38%)
+- Dark Grayish Blue: hsl(217, 19%, 24%)
+- Dark Blue: hsl(218, 23%, 16%) */
+
+:root {
+  --lightCyan: hsl(193, 38%, 86%);
+  --neonGreen: hsl(150, 100%, 66%);
+
+  --GrayishBlue: hsl(217, 19%, 38%);
+  --DarkGrayishBlue: hsl(217, 19%, 24%);
+  --DarkBlue: hsl(218, 23%, 16%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+body {
+  background-color: var(--DarkBlue);
+  font-family: "Manrope", sans-serif;
+  color: var(--lightCyan);
+  font-size: calc(2vh + .2rem);
+  overflow-y: hidden;
+}
+
+h1 {
+  margin: 2vh 0;
+  color: var(--neonGreen);
+  font-size: medium;
+}
+
+.container {
+  margin: 30vh auto;
+  padding: 1rem 1.5rem;
+  background-color: var(--DarkGrayishBlue);
+  border-radius: 0.5rem;
+  text-align: center;
+  height: 40vh;
+  width: 90vw;
+}
+
+.divider {
+  height: 5%;
+  width: 90%;
+  margin: 2vh 0;
+}
+
+button.next{
+    background-color: var(--neonGreen);
+    padding: 1.8rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button.next:hover{
+    box-shadow: 0px 0px 20px 1px var(--neonGreen); /* Bayangan di luar */
+    transition: .4s;
+    }
+
+button.next:active{
+    padding: 1.5rem;
+}
+
+button.next img{
+    width: calc(1.7 + .5rem);
+}
+
+/* IPAD */
+@media(min-width: 809px){
+    button.next{
+        position: absolute;
+        top: 75%;
+    }
+
+    .divider{
+        height: 6%;
+    }
+}
+
+/* DESKTOP */
+@media(min-width: 812px){
+    .container{
+        width: 40vw;
+    }
+
+    .divider{
+        height: 10%;
+    }
+
+    button.next{
+        position: absolute;
+        top: 70%;
+    }
+}

@@ -258,11 +258,11 @@ p.txt-2 {
 
   .slider-container img:nth-child(1) {
     height: auto;
-    width: 100vw;
+    width: 35vw;
   }
   .slider-container img:nth-child(2) {
     height: auto;
-    width: 100vw;
+    width: 35vw;
   }
 
   .button {
@@ -270,7 +270,7 @@ p.txt-2 {
     background-color: #fff;
     padding: 0.2rem 0.6rem;
     position: absolute;
-    top: 68%;
+    top: 84%;
     left: 62%;
   }
 
