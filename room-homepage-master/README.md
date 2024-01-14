@@ -9,7 +9,6 @@
   - [Built with](#built-with)
 - [Author](#author)
 
-
 ## Overview
 
 ### The challenge
@@ -22,10 +21,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/Desktop.jpg)
-![](./screenshots/Mobile.jpg)
-![](./screenshots/Mobile-active.jpg)
-
+![](./screenshots/Desktop.JPG)
+![](./screenshots/Mobile.JPG)
+![](./screenshots/Mobile-active.JPG)
 
 ### Built with
 
