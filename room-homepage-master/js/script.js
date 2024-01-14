@@ -22,13 +22,11 @@ const bgImgArray = [
   "url('/images/desktop-image-hero-3.jpg')",
 ];
 
-
 let currentIndex = 0;
 const maxIndex = bgImgArray.length - 1;
 const minIndex = bgImgArray.length - bgImgArray.length;
 
 backButton.addEventListener("click", function () {
-  // currentIndex = (currentIndex - 1 + bgImgArray.length) % bgImgArray.length;
   currentIndex--;
   if(currentIndex < minIndex){
     currentIndex = maxIndex;

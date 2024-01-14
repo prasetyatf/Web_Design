@@ -9,7 +9,6 @@
   - [Built with](#built-with)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -23,18 +22,17 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshots/Desktop.jpg)
+![](./screenshots/Mobile.jpg)
+![](./screenshots/Mobile-active.jpg)
 
-## My process
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [Styled Components](https://styled-components.com/) - For styles
 
 ## Author
 
